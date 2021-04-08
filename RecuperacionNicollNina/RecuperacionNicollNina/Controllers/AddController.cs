@@ -10,7 +10,14 @@ namespace RecuperacionNicollNina.Controllers
     public class AddController : ApiController
     {
         [HttpGet]
+        [HttpPost]
         public int Sumar(int a, int b)
+        {
+            return a + b;
+        }
+        [HttpPost]
+        [Route("{a}/{b}")]
+        public int Sumar2(int a,  int b)
         {
             return a + b;
         }
